@@ -2,7 +2,7 @@
 
 namespace nu4h;
 
-use pocketmine\block\block;
+use pocketmine\block\Block;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\Listener;
 use pocketmine\item\Item;
