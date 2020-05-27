@@ -7,12 +7,10 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\Listener;
 use pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\Config;
+
 
 class Main extends PluginBase implements Listener
 {
-    /** @var $config Config */
- public $config;
 
 
     public function onEnable()
@@ -20,7 +18,7 @@ class Main extends PluginBase implements Listener
         $this->getLogger()->info("le plugin a été correctement lancer");
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
 
-        $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+       
 
     }
 
@@ -37,12 +35,5 @@ class Main extends PluginBase implements Listener
     public function onDisable()
 {
     $this->getLogger()->info("le plugin a été correctement desactiver");
-}
- if(file_exists($this->getDataFolder() . "config.yml")){
-
-
-}else{
-    $this->getLogger()->info("Le fichier config a ete creer");
-    $this->saveResource("config.yml");
 }
 }
