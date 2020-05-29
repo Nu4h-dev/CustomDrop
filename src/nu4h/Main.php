@@ -25,7 +25,7 @@ $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML, array(
 public function onBreak(BlockBreakEvent $ev){
 $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
 if($ev->getBlock()->getId() == $config->get('block')){
-
+$event->setDrops([Item::get($config->get('loot'), 0, 1]);
 }
 }
 }
