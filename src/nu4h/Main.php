@@ -1,6 +1,6 @@
 <?php
 
-namespace tuto;
+namespace nu4h;
 
 use pocketmine\block\Block;
 use pocketmine\event\block\BlockBreakEvent;
