@@ -1,6 +1,6 @@
 <?php
 
-namespace nu4h;
+namespace tuto;
 
 use pocketmine\block\Block;
 use pocketmine\event\block\BlockBreakEvent;
@@ -12,43 +12,20 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener
 {
-
-private $config;
-    public function onEnable()
-    {
-        $this->getLogger()->info("le plugin a été correctement lancer");
-        $this->getServer()->getPluginManager()->registerEvents($this,$this);
-
-@mkdir($this->getDataFolder());
-
-        if (!file_exists($this->getDataFolder() . "config.yml")) {
-
-            $this->saveResource('config.yml');       
-
-    }
-    $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML, array(
-   "block" => "BEETROOT_BLOCK",
-   "loot" => "377"
+public function onEnable(){
+@mkdir($this->getDataFoler());
+if(!file_exists($this->getDataFolder()){
+$this->saveResource('config.yml');
+}
+$config = new Config($this->getDataFolder() . 'config.yml', Config::YAML, array(
+"loot" => "377",
+"block" => "BEETROOT_BLOCK",
 ));
 }
+public function onBreak(BlockBreakEvent $ev){
+$config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
+if($ev->getBlock()->getId() == $config->get('block')){
 
-
-    public function onBreak(BlockBreakEvent $event) {
-        $block = $event->getBlock();
-            $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
-
-               if($block->getID() == $config->get('block')) {
-
-                    $event->setDrops($config->get('loot'));
-
-                
-        }
-    }
-
-
-
-    public function onDisable()
-{
-    $this->getLogger()->info("le plugin a été correctement desactiver");
+}
 }
 }
