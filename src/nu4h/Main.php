@@ -7,7 +7,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\Listener;
 use pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\config;
+use pocketmine\utils\Config;
 
 
 class Main extends PluginBase implements Listener
