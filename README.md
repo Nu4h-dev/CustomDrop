@@ -10,7 +10,7 @@ en attendant le fichier config
 
 # Futur mise a jour
 
-- [ ] Fichier config.yml
+- [x] Fichier config.yml
 - [ ] Ajouts de plusieur autre block ou l'item est modifier
 
 # .phar
