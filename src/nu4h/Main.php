@@ -14,7 +14,7 @@ class Main extends PluginBase implements Listener
 public function onEnable(){
 @mkdir($this->getDataFoler());
 if(!file_exists($this->getDataFolder()){
-$this->saveResource('config.yml')
+$this->saveResource('config.yml');
 }
 $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML, array(
 "loot" => "377",
