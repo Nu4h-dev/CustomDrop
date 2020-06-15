@@ -7,7 +7,7 @@ use pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class main extends PluginBase 
+class Main extends PluginBase 
 {
     public function onEnable()
     {
