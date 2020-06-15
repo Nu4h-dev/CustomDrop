@@ -3,11 +3,11 @@
 namespace nu4h;
 
 use pocketmine\event\block\BlockBreakEvent;
-use pocketmine\event\Listener;
+use pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class main extends PluginBase implements Listener
+class main extends PluginBase 
 {
     public function onEnable()
     {
