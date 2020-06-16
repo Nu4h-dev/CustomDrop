@@ -24,3 +24,7 @@ Il vous suffit juste de faire extractplugin CustomDrop avec devtools dasn votre 
 Tout les droit sur ce plugin me revienne,
 si une personne a modifier le namespace et l'author merci de venir me le dire sur discord
 [QB]nu4h#6002
+
+# Credits
+
+Merci a @arclegrandroi pour m'avoir aider sur une parti du code
