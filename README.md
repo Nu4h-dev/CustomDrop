@@ -18,6 +18,7 @@ en attendant le fichier config
 le .phar et disponible ici:
 https://github.com/Nu4h-dev/CustomDrop/releases/tag/1.0.0
 Il vous suffit juste de faire extractplugin CustomDrop avec devtools dasn votre console
+ou d'aller sur : https://poggit.pmmp.io/ci/Nu4h-dev/CustomDrop/CustomDrop
 
 # Droit
 
