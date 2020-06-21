@@ -24,9 +24,11 @@ class Main extends PluginBase
 
     public function onBreak(BlockBreakEvent $event)
     {
-        $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
-        if ($event->getBlock()->getId() == $config->get('block') && $event->getBlock()->getDamage() == $config->get('data')) {
-            $event->setDrops([Item::get($config->get('loot'), 0, 1)]);
-        }
+       $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
+       foreach ($config->getAll() as $drop) {
+            if ($event->getBlock()->getId() == $drop['block'] && $event->getBlock()->getDamage() == $drop['data']) {
+                $event->setDrops([Item::get($drop['loot-id'],$drop['loot-data'], $drop['loot-count'])]);
+            }
+       }
     }
 }
