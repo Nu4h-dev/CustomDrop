@@ -17,16 +17,20 @@ class Main extends PluginBase
         }
         $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML, array(
             "loot" => "377",
+            "loot-count" => "60",
             "block" => "BEETROOT_BLOCK",
             "data" => "7",
+            "loot-data" => "7",
         ));
     }
 
     public function onBreak(BlockBreakEvent $event)
     {
         $config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
-        if ($event->getBlock()->getId() == $config->get('block') && $event->getBlock()->getDamage() == $config->get('data')) {
-            $event->setDrops([Item::get($config->get('loot'), 0, 1)]);
-        }
+       foreach ($config->getAll() as $drop) {
+            if ($event->getBlock()->getId() == $drop['block'] && $event->getBlock()->getDamage() == $drop['data']) {
+                $event->setDrops([Item::get($drop['loot-id'],$drop['loot-data'], $drop['loot-count'])]);
+            }
+       }
     }
 }
