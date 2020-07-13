@@ -11,6 +11,7 @@ en attendant le fichier config
 # Futur mise a jour
 
 - [x] Fichier config.yml
+- [x] Ajouts d'un version premium en version 1 a 1 euro
 - [ ] Ajouts de plusieur autre block ou l'item est modifier
 
 # .phar
@@ -24,7 +25,7 @@ ou d'aller sur : https://poggit.pmmp.io/ci/Nu4h-dev/CustomDrop/CustomDrop
 
 Tout les droit sur ce plugin me revienne,
 si une personne a modifier le namespace et l'author merci de venir me le dire sur discord
-[QB]nu4h#6002
+a6o#6002
 
 # Credits
 
